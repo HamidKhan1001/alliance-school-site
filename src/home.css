@@ -5,6 +5,9 @@ body, .home {
   padding: 0;
   background: #f2f6ff;
   color: #333;
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* ==== ANIMATIONS ==== */
@@ -115,16 +118,24 @@ body, .home {
 
 /* ==== HERO ==== */
 .hero {
+  width: 100vw;
+  margin: 0;
+  padding: 60px 0;
   background: #001f4d;
   color: white;
   text-align: center;
-  padding: 60px 20px;
-  border-radius: 0 0 30px 30px;
+  position: relative;
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   color: #ffd700;
+  position: relative;
+  z-index: 2;
 }
 
 .hero p {
@@ -132,10 +143,12 @@ body, .home {
   opacity: 0;
   animation-delay: 0.5s;
   animation-fill-mode: both;
+  position: relative;
+  z-index: 2;
 }
 
 /* ==== SECTIONS ==== */
-section {
+section:not(.hero) {
   max-width: 1000px;
   margin: 40px auto;
   padding: 30px 20px;
@@ -211,6 +224,7 @@ h2 {
     flex-direction: column;
   }
 }
+
 /* ==== FLOATING GEOMETRIC SHAPES ==== */
 .floating-shapes {
   position: absolute;
@@ -229,7 +243,6 @@ h2 {
   animation: floatGeo 10s infinite ease-in-out;
 }
 
-/* Floating animation */
 @keyframes floatGeo {
   0%   { transform: translateY(0) rotate(0deg); opacity: 0.6; }
   50%  { transform: translateY(-60px) rotate(180deg); opacity: 0.9; }
@@ -258,13 +271,13 @@ h2 {
   border-bottom: 30px solid #ffd43b;
 }
 
-/* Pentagons using clip-path */
+/* Pentagons */
 .shape-4, .shape-9, .shape-14 {
   background: #69db7c;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
-/* Hexagons using clip-path */
+/* Hexagons */
 .shape-5, .shape-10, .shape-15 {
   background: #845ef7;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
@@ -287,18 +300,17 @@ h2 {
 .shape-14 { top: 95%; left: 30%; animation-delay: 1.7s; }
 .shape-15 { top: 5%;  left: 95%; animation-delay: 2.3s; }
 
-/* Text stays above */
-.hero {
-  position: relative;
-  z-index: 1;
-}
-.hero h1, .hero p {
-  position: relative;
-  z-index: 2;
-}
+/* ==== SCROLLING ==== */
 html {
   scroll-behavior: smooth;
 }
+
 section {
-  scroll-margin-top: 80px; /* Adjust if navbar height is different */
+  scroll-margin-top: 80px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
