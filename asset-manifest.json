@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/alliance-school-site/static/css/main.4686b1a8.css",
+    "main.js": "/alliance-school-site/static/js/main.c81b239a.js",
+    "index.html": "/alliance-school-site/index.html",
+    "main.4686b1a8.css.map": "/alliance-school-site/static/css/main.4686b1a8.css.map",
+    "main.c81b239a.js.map": "/alliance-school-site/static/js/main.c81b239a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4686b1a8.css",
+    "static/js/main.c81b239a.js"
+  ]
+}
