@@ -9,33 +9,33 @@ function Home() {
   const closeSidebar = () => setSidebarOpen(false);
 
   return (
-    <div className="home">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo">Alliance of Learning School Thana</div>
+    <div id="hero" className="home">
+  {/* Navbar */}
+  <nav className="navbar">
+    <div className="logo">Alliance of Learning School Thana</div>
 
-        <div className="nav-links desktop-only">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/admissions">Admissions</Link>
-          <Link to="/academics">Academics</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
+    <div className="nav-links desktop-only">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Admissions</a>
+      <a href="#academics">Academics</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-        <div className="hamburger mobile-only" onClick={toggleSidebar}>☰</div>
-      </nav>
+    <div className="hamburger mobile-only" onClick={toggleSidebar}>☰</div>
+  </nav>
 
-      {/* Sidebar (Mobile Only) */}
-      <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-        <div className="close-btn" onClick={closeSidebar}>×</div>
-        <Link to="/" onClick={closeSidebar}>Home</Link>
-        <Link to="/about" onClick={closeSidebar}>About</Link>
-        <Link to="/admissions" onClick={closeSidebar}>Admissions</Link>
-        <Link to="/academics" onClick={closeSidebar}>Academics</Link>
-        <Link to="/contact" onClick={closeSidebar}>Contact</Link>
-      </div>
-      {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
+  {/* Sidebar (Mobile Only) */}
+  <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+    <div className="close-btn" onClick={closeSidebar}>×</div>
+    <a href="#hero" onClick={closeSidebar}>Home</a>
+    <a href="#about" onClick={closeSidebar}>About</a>
+    <a href="#admissions" onClick={closeSidebar}>Admissions</a>
+    <a href="#academics" onClick={closeSidebar}>Academics</a>
+    <a href="#contact" onClick={closeSidebar}>Contact</a>
+  </div>
 
+  {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
       {/* Hero */}
      <section className="hero animated">
 <div className="floating-shapes">
@@ -54,14 +54,14 @@ function Home() {
 
 
       {/* About */}
-      <section className="animated">
+      <section id="about" className="animated">
         <h2>About Our School</h2>
         <p>Alliance of Learning School Thana is a trusted and inclusive school in Faqirabad Thana, Malakand. We provide nurturing education through innovative methods, a safe campus, and a supportive team.</p>
         <p>We offer education from Playgroup to Grade 10 with a focus on literacy, values, skills, and personality growth.</p>
       </section>
 
       {/* Child Development */}
-      <section className="animated">
+      <section  className="animated">
         <h2>How We Help Your Child Grow</h2>
         <ul>
           <li> Small classrooms with personal attention</li>
@@ -73,7 +73,7 @@ function Home() {
       </section>
 
       {/* Academics */}
-      <section className="academics animated">
+      <section id="academics" className="academics animated">
         <h2>Our Curriculum & Activities</h2>
         <div className="program-list">
           <div className="program-card">
@@ -92,7 +92,7 @@ function Home() {
       </section>
 
       {/* Admissions */}
-      <section className="admissions animated">
+      <section id="contact"  className="admissions animated">
         <h2>Admissions & Contact</h2>
         <p>Enroll now for 2025-2026! Visit us or call the admin office for form, criteria, and fee structure.</p>
         <p><strong>📞 +92 312 555 4321</strong></p>
@@ -101,7 +101,7 @@ function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="testimonials animated">
+      <section id="testimonials" className="testimonials animated">
         <h2>What Parents Say</h2>
         <div className="testimonial-list">
           <div className="testimonial">
