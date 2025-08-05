@@ -37,20 +37,23 @@ function Home() {
 
   {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
       {/* Hero */}
-     <section className="hero animated">
-<div className="floating-shapes">
-  {Array.from({ length: 15 }, (_, i) => (
-    <div className={`geo-shape shape-${i + 1}`} key={i}></div>
-  ))}
-</div>
+ {/* Hero */}
+<section className="hero animated">
+  <div className="container">  {/* ✅ Add this wrapper */}
+    <div className="floating-shapes">
+      {Array.from({ length: 15 }, (_, i) => (
+        <div className={`geo-shape shape-${i + 1}`} key={i}></div>
+      ))}
+    </div>
 
-
-  <h1> Where Every Child Shines Bright </h1>
-  <p>
-    Welcome to Alliance of Learning School Thana — nurturing knowledge,
-    creativity, and character in Faqirabad, Malakand.
-  </p>
+    <h1> Where Every Child Shines Bright </h1>
+    <p>
+      Welcome to Alliance of Learning School Thana — nurturing knowledge,
+      creativity, and character in Faqirabad, Malakand.
+    </p>
+  </div>
 </section>
+
 
 
       {/* About */}
